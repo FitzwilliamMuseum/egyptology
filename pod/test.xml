@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Nigel test podcast</title>
+    <link>http://www.newton.cam.ac.uk/egypt/pod/test.xml</link>
+    <description>Miscellaneous rubbish</description>
+    <generator>Feeder 1.1.2 http://reinventedsoftware.com/feeder/</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <language>en-us</language>
+    <pubDate>Sat, 02 Jul 2005 09:33:17 +0100</pubDate>
+    <lastBuildDate>Sat, 02 Jul 2005 09:33:17 +0100</lastBuildDate>
+    <item>
+      <title>a test podcast</title>
+      <link>http://www.newton.cam.ac.uk/egypt/pod/testtune.mp3</link>
+      <author>ncs3@cam.ac.uk</author>
+      <pubDate>Sat, 02 Jul 2005 09:33:17 +0100</pubDate>
+      <enclosure url="http://www.newton.cam.ac.uk/egypt/pod/testtune.mp3" length="5427009" type="audio/mpeg"/>
+      <guid isPermaLink="false">a-test-podcast</guid>
+    </item>
+  </channel>
+</rss>

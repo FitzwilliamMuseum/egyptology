@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+/* This first bit of code sets the page parameters and fonts etc */
+body {
+	margin: 20px;
+	padding: 0;
+	background: #FFFFFF;
+	/* change master font size here */
+	font: normal .75em Tahoma, Arial, Helvetica, sans-serif;
+	color: #333333; 
+}
+
+/* This CSS deals with the styles etc needed for the alpha overlay */
+
+#navWrap {
+    height: 30px;
+}
+#nav {
+   padding: 5px;
+   background: #FFF;    
+}
+#nav ul {
+   margin: 0;
+padding: 0;    
+}
+#nav li {
+	float: left;
+	padding: 3px 3px;
+	background-color: #FFF;
+	margin: 0 10px 0 0;
+	color: #F00;
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 18px;
+}
+#nav li a {
+ color: #F00;  
+text-decoration: none;    
+}
+#nav li a:hover {
+  text-decoration: underline;   
+}
+br.clearLeft {
+   clear: left;        
+}
+.bigNum {
+   font-size: 20px;
+color: #000;
+ background: #FFF;
+padding: 2px;    
+}
+
+#data {
+/* This clears the float property to ensure the data stays left */
+	clear: both;
+}

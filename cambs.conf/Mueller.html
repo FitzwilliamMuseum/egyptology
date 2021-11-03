@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+</head>
+<body>
+<h1>DIE ERFASSUNG VON SZENEN IM SYSTEM GNOSARCH</h1>
+<h2>Maya M&uuml;ller</h2>
+
+Spezialarbeiten &uuml;ber &auml;gyptische Ikonographie, ja ein umfassendes
+Handbuch auf diesem Gebiet, werden heute vielfach als dringendes Desiderat
+empfunden. Jan Quaegebeur hat es k&uuml;rzlich wie folgt formuliert: "En effet,
+le "Dizionario di Mitologia Egizia" de R. Lanzone, &eacute;dit&eacute; &agrave;
+Turin il y a plus d'un si&egrave;cle, doit &ecirc;tre remplac&eacute; par un
+nouveau r&eacute;pertoire iconographique, qui pourrait constituer un pendant au
+"Lexicon Iconographicum Mythologiae Classicae", en cours de publication.<a
+href="#fn0">[1]</a> Im folgenden sollen einige Ueberlegungen mitgeteilt werden
+zur Frage, wie die &auml;gyptische Bildwelt in einem Datenbanksystem erfasst
+werden kann. Es sollen dabei die Szenen der Flachkunst, genauer gesagt die
+Reliefs und Malereien, die an den W&auml;nden von Geb&auml;uden angebracht
+sind, im Mittelpunkt stehen, weil sie das komplexeste Problem darstellen. Es
+sei aber im Auge behalten, dass sie nur einen Teilbereich der ganzen
+bildk&uuml;nstlerischen (sowie &uuml;berhaupt der materiellen)
+Hinterlassenschaft Aegyptens darstellen, die gesamthaft nach einheitlichen
+Kriterien zu analysieren ist. <p>
+
+Wer mit einem Datenbanksystem arbeiten will, ist unweigerlich mit dem von Nigel
+Strudwick<a href="#fn1">[2]</a> aufgeworfenen Problem der Standardisierung
+konfrontiert. Denn jede Erfassung von Daten setzt voraus, dass die ganze
+innerhalb eines bestimmten Fachgebiets zu erwartende Informationsmenge
+analysiert und strukturiert wird. In unserem Falle handelt es sich
+grunds&auml;tzlich um die gesamte materielle Kultur des Niltals. Es m&uuml;ssen
+zun&auml;chst alle vorkommenden materiellen Dinge und deren Teile definiert und
+benannt werden, mit anderen Worten: es sind Begriffsthesauri zu erstellen. Die
+Dinge bzw. Begriffe sind sodann zu klassifizieren, d.h. unter oftmals
+abstrakten Oberbegriffen zusammenzufassen. Hier kommen wir zu unserem
+eigentlichen Anliegen, denn Klassifizierungen k&ouml;nnen nach ganz
+verschiedenen Kriterien erfolgen, sie k&ouml;nnen hierarchisch oder
+nicht-hierarchisch sein, und vor allem k&ouml;nnen sie sich je nach Wahl des
+Gesichtspunktes gegenseitig &uuml;berschneiden. In einem postrelationalen
+Datenbanksystem k&ouml;nnen aber hierarchische, nicht-hierarchische und sich
+&uuml;berschneidende Einteilungen zugleich verwendet werden. <p>
+
+Bevor wir auf die Erfassung von Szenen eintreten k&ouml;nnen, soll in gebotener
+K&uuml;rze angedeutet werden, wie das System GNOSARCH aufgebaut ist. Bei der
+Konzeption der Datenverwaltung haben die Porter-Moss-B&auml;nde als Modell
+gedient. Wie in den Porter-Moss-B&auml;nden wird ganz Aegypten gleichsam als
+ein grosses, topographisch geordnetes "Magazin", das mit Kulturg&uuml;tern
+angef&uuml;llt ist, aufgefasst, zu welchem Museen und Sammlungen ausserhalb des
+Landes als "D&eacute;pendancen" hinzutreten. Zu jedem Ort, Bauwerk und Teil
+eines Bauwerks geh&ouml;ren Verzierungen am Bau und Funde aller Art mit ihren
+Beschreibungen, aktuellen Standorten, bibliographischen Angaben u.s.w. Die
+Klassifikationen von Begriffen, die in einem Buch nur als einzelne, im Anhang
+untergebrachte Indizes in Erscheinung treten k&ouml;nnen, sind im GNOSARCH
+derart eingebaut, dass das ganze System praktisch aus lauter Indizes besteht,
+deren Bestandteile beliebig miteinander zu verbinden sind. <p>
+
+Die wichtigsten Indizes, oder besser Thesaurusdateien, sind: Orte, Bauwerke,
+Zeitangaben, nat&uuml;rliche Personen, juristische Personen (u.a. Museen),
+Dinge, Materialien, Techniken, politisch-religi&ouml;se Begriffe (Abstrakta),
+ikonographische Begriffe (Szenennamen). Die Begriffe, die sich in ein- und
+derselben Thesaurusdatei befinden, k&ouml;nnen auf hierarchische und zugleich
+auf nicht-hierarchische Weise miteinander verbunden werden, und es k&ouml;nnen
+auch zwischen jeder Thesaurusdatei und jeder anderen beliebig viele
+Verbindungen hergestellt werden. Eine hierarchische Reihe l&auml;sst sich in
+dem Sinne als vertikal beschreiben, dass der zuunterst stehende Begriff vom
+n&auml;chsth&ouml;heren abh&auml;ngig ist, dieser wiederum vom
+n&auml;chsth&ouml;heren u.s.w., und eine nicht-hierarchische Reihe insofern als
+horizontal, als die in ihr enthaltenen Begriffe voneinander unabh&auml;ngig und
+gleichwertig sind. So kann z.B. der zur Dingdatei geh&ouml;rige Begriff "Rote
+Krone" in der Hierarchie "Landeskrone-Kopftracht-Bekleidung" stehen, zugleich
+aber auch mit den Begriffen "K&ouml;nigskrone", "G&ouml;tterkrone" oder "Krone"
+verbunden sein; die drei letztgenannten Begriffe dienen als verbindende
+Stichw&ouml;rter f&uuml;r nicht-hierarchische, horizontale Gruppierungen von
+Dingen, die unter einem bestimmten Gesichtspunkt zusammengeh&ouml;ren. <p>
+
+Die Thesaurusdateien stellen den einen Hauptteil des GNOSARCH dar, in dem ein
+allgemeines und/oder mehrere spezielle Lexika aufgebaut werden k&ouml;nnen.
+Angesichts der mannigfaltigen, vertikalen und horizontalen
+Verbindungsm&ouml;glichkeiten innerhalb und zwischen den einzelnen
+Thesarusdateien ist eine komplexe Strukturierung dieser Lexika m&ouml;glich,
+die dem Benutzer anheimgestellt ist. Der andere Hauptteil des Datenbanksystems
+enth&auml;lt die Museumsobjekte, die lediglich aus einer Inventarnummer und den
+in jedem einzelnen Fall erw&uuml;nschten Verbindungen mit den in den
+Thesaurusdateien enthaltenen Begriffen bestehen. Die beiden Teile sind somit
+aufs engste miteinander verflochten. Die Thesaurusdateien sind gleichsam die
+W&ouml;rterb&uuml;cher, in denen jeder Begriff nur einmal gespeichert ist, und
+die Museumsobjekte sind die Belegstellen dazu. <p>
+
+Als Museumsobjekte k&ouml;nnen nicht nur Dinge behandelt werden, die sich
+tats&auml;chlich in Museen befinden, sondern auch Reliefs und Wandmalereien in
+Tempeln und Gr&auml;bern. Ein Bauwerk (oder ein Teil desselben) wird als
+"Museum" deklariert, dessen "Sammlung" aus einer Anzahl von Szenen besteht. Das
+hat den wichtigen Vorteil, dass der Zusammenhang von einer Szene zur
+n&auml;chsten, von einer Wand zur n&auml;chsten, von einem Raum zum
+n&auml;chsten gewahrt bleibt. Der Benutzer der Datenbank kann also eine
+bestimmte Szene von dem Geb&auml;ude aus ansteuern, in dem sie sich befindet,
+(wie in den Porter-Moss-B&auml;nden), oder zus&auml;tzlich von jedem anderen
+direkt oder indirekt &uuml;ber Verzweigungen mit dieser Szene verbundenen
+Stichwort aus. <p>
+
+Die Erfassung von Szenen sei nun noch anhand von Beispielen n&auml;her
+erl&auml;utert. Offensichtlich ist zun&auml;chst eine Definition des Begriffs
+"Szene" erforderlich. Die Unterscheidung von einzelnen Szenen innerhalb eines
+Bildtr&auml;gers kann nach dem Muster erfolgen, das die Redaktion der
+Porter-Moss-B&auml;nde erarbeitet hat: Dominante Figuren, die eine Handlung
+anf&uuml;hren oder der Zielpunkt einer Handlung sind, sind oft dadurch
+hervorgehoben, dass sie viel gr&ouml;sser dargestellt sind als alle
+&uuml;brigen Figuren. Solche Hauptfiguren k&ouml;nnen nur G&ouml;tter und
+G&ouml;ttinnen, K&ouml;nige und K&ouml;niginnen, Grabinhaber und
+Grabinhaberinnen sein. Eine Szene ist also definiert durch das Auftreten einer
+solchen rangm&auml;ssig hervorragenden Hauptfigur, auch wenn sie zuweilen nicht
+gr&ouml;sser dargestellt ist als die &uuml;brigen Figuren. Besonders in den
+Gr&auml;bern k&ouml;nnen sich gr&ouml;ssere Agglutinate von Nebenfiguren
+anschliessen, die in Subszenen unterteilt werden k&ouml;nnen entsprechend den
+Handlungen, die sie ausf&uuml;hren. Als Beispiele seien nur die Darstellungen
+eines Grabherrn genannt, der eine Reihe von Arbeiten &uuml;berwacht, oder eines
+Paares von Grabinhabern, das einem Gastmahl vorsitzt. (Szenen ohne Hauptfiguren
+k&ouml;nnen hier aus Platzgr&uuml;nden nicht diskutiert werden). <p>
+
+Es erscheint mir wesentlich, komplexe Szenen, die sich aus mehreren Subszenen
+zusammensetzen, nicht auseinanderzureissen, denn der Zusammenhang zwischen den
+Subszenen und der Hauptfigur muss ber&uuml;cksichtigt werden, wenn man den Sinn
+der Darstellung verstehen will. Jedoch ist die Unterscheidung von Szenen und
+Subszenen nicht hierarchisch, denn einerseits geh&ouml;rt auch derjenige
+Bestandteil des Bildes, der die Hauptfigur enth&auml;lt, zu den Subszenen, und
+andererseits entf&auml;llt die Unterscheidung ohnehin &uuml;berall dort, wo
+keine Hauptfigur auftritt. Der Name einer komplexen Szene wird zwar vertikal
+mit den von ihr abh&auml;ngigen Subszenen verbunden, aber diese Hierarchie gilt nur in der Datei der Museumsobjekte, denn es handelt sich in jedem gegebenen
+Fall um eine individuelle ad-hoc-Konstellation. Die Thesaurusdateien, die nur
+die allgemeing&uuml;ltigen Verbindungen aufnehmen, sind davon nicht betroffen.<p>
+
+Was die vertikalen Verbindungen angeht, die in der Datei der Museumsobjekte
+zwischen den Namen von Szenen und den zugeh&ouml;rigen Subszenen m&ouml;glich
+sind, so stellt das Datenbanksystem daf&uuml;r die sog. Sublinks zur
+Verf&uuml;gung. Ein Sublink wird an eine bereits hergestellte Hauptverbindung -
+z.B. zwischen der Inventarnummer eines Objekts und dem Szenennamen -
+angeh&auml;ngt. Dieser Vorgang wird so oft wiederholt, bis alle zu einer
+komplexen Szene geh&ouml;rigen Subszenen erfasst sind, die demnach alle
+parallel zueinander an der Hauptverbindung festgemacht sind. Ueberdies
+konstituiert jedes Sublink gleichsam ein neues Teilobjekt, das, wie das
+&uuml;bergeordnete Hauptobjekt, horizontale Verbindungen zu den
+Thesaurusdateien haben kann, und das seinerseits wiederum als Ausgangspunkt
+f&uuml;r weitere Sublinks dienen kann u.s.w. Mit dieser Technik kann z.B. auch
+eine Gruppenstatue erfasst werden, die als Ganzes das Hauptobjekt bildet,
+w&auml;hrend die einzelnen Figuren, aus denen sie sich zusammensetzt, als
+Sublinks davon abh&auml;ngen.<a href="#fn2">[3]</a> <p>
+
+Als Beispiel f&uuml;r eine (als Museumsobjekt zu erfassende) komplexe Szene sei
+das untere Register an der Wand Nr. 6 im Grab des Nacht (TT52) angef&uuml;hrt,
+wo der Grabherr und seine Frau in der Halle sitzen und zuschauen, wie ihr
+Gesinde verschiedene Produkte des Deltas gewinnt und verarbeitet. <p>
+
+<pre>
+
+SCHEICH ABD EL-GURNA TT52(6),3Wandmalerei im Grab des Nacht
+
+Typologie Bildtr&auml;ger [Thesaurusdatei "Ding"]:
+   Architektur, architektonisches Element, Wandmalerei 
+Typologie Szene [Thesaurusdateien "Ikonographie", "Abstrakta"]:
+   Sehen der Produkte; Zyklus: Privatleben und/oder Die Freuden 
+   der Marschen 
+   Subszenen:
+      Sitzen in der Halle und/oder Sitzen am Speisehaufen 
+         (Leitszene); Zyklus: Die Freuden der Marschen und/oder
+         Privatleben
+      Reihe von Produktetr&auml;gern; Zyklus: Dienstleistung und/oder
+         Reihen
+      Trauben ernten; Zyklus: Rebbau-Prim&auml;re Produktion-
+         Produktion und Verarbeitung
+      Keltern; Zyklus: Verarbeitung von Verbrauchsg&uuml;tern-
+         Produktion und Verarbeitung
+      Gefl&uuml;gel verarbeiten; Zyklus: Verarbeiten von 
+         Verbrauchsg&uuml;tern-Produktion und Verarbeitung
+      Jagd mit Klappnetz; Zyklus: Jagd-Gewinnung-Produktion und 
+         Verarbeitung und/oder Arbeiten in den Marschen
+Freie Stichw&ouml;rter: Geste der Z&auml;rtlichkeit
+
+</pre>
+
+Die Gesamtszene kann, gem&auml;ss der Beischrift, als "Sehen der Produkte"
+bezeichnet werden; die erste Subszene, die die Hauptfiguren enth&auml;lt, als
+"Sitzen in der Halle" und/oder "Sitzen am Speisehaufen"; die T&auml;tigkeiten
+des Gesindes in den &uuml;brigen Subszenen als "Trauben ernten", "Keltern",
+"Jagd mit Klappnetz", "Gefl&uuml;gel verarbeiten" u.s.w. Die Erfassung geht
+praktisch so vor sich, dass die Inventarnummer der Gesamtszene, die in der
+Dateider Museumsobjekte unter "TT52" abgelegt ist, mit ihrem in der
+ikonographischen Thesaurusdatei bereitgestellten Namen verbunden wird; an diese
+Hauptverbindung werden die wiederum aus der ikonographischen Thesaurusdatei
+abzurufenden Namen der Subszenen als Sublinks angeh&auml;ngt. S&auml;mtliche
+Verbindungen (Links) werden in Form von automatisch erzeugten Codenummern -
+f&uuml;r den Benutzer der Datenbank nicht sichtbar - in separaten
+Verbindungsdateien (Linkdateien) gespeichert. <p>
+
+Nun seien noch einige Ausf&uuml;hrungen zur Strukturierung der Thesaurusdateien
+angeschlossen. Eine Datenbank von Szenen gewinnt, wie eingangs schon
+angedeutet, erst dann an Interesse, wenn die Szenen auch klassifiziert und zu
+thematischen Zyklen zusammengefasst werden k&ouml;nnen.<a href="#fn3">[4]</a>
+Dieser Vorgang hat seinen Platz in den Thesaurusdateien, er spielt sich
+unabh&auml;ngig von den "Belegstellen" ab. Die wichtigste Regel ist sicherlich
+diejenige, dass ein Begriff nur dann einem hierarchischen Oberbegriff
+unterstellt werden soll, wenn die Zuordnung in jedem auf den Denkm&auml;lern
+vorkommenden Fall zutrifft. Die Beziehung zwischen einer Szene und einem
+thematischen Zyklus, innerhalb dessen sie in einem gegebenen Fall auftritt, ist
+grunds&auml;tzlich als nicht-hierarchisch zu beurteilen, weil ein- und dieselbe
+Szene zu mehreren Zyklen geh&ouml;ren kann; man denke nur an die vieldeutige
+Szene des "Sitzens am Speisetisch/-haufen", die zum Speiseritual, zu einer
+Privatveranstaltung, zu einem Verwaltungsakt u.s.w. geh&ouml;ren kann; oder an
+manche Opferhandlungen, die Bestandteil verschiedener Rituale sein k&ouml;nnen.
+Die Beziehung zwischen Szene und Zyklus wird daher als horizontale Verbindung
+erfasst, wobei die Namen der Szenen oder Subszenen in der ikonographischen
+Thesaurusdatei gesammelt werden, w&auml;hrend die Namen der thematischen
+Zyklen, die als Abstraktionen zu betrachten sind, besser in der Thesaurusdatei
+der politisch-religi&ouml;sen Begriffe (Abstrakta) unterzubringen sind. Auf
+diese Weise kann ein Szenenname mit mehreren Zyklen verbunden werden. <p>
+
+So sind z.B. alle Techniken der Jagd und der Fischerei dem Oberbegriff
+"Gewinnung" (d.h. Ausbeutung nat&uuml;rlicher Ressourcen) zuzuordnen. Zugleich
+k&ouml;nnen diejenigen Sumpfjagdtechniken, die von Bediensteten angewandt
+werden, dem Zyklus "Arbeit in den Marschen" zugeteilt werden, w&auml;hrend die
+von Grabherren bevorzugten Techniken (auch) zum Zyklus "Privatleben"
+geh&ouml;ren k&ouml;nnen. Ferner k&ouml;nnten die auf der oben erw&auml;hnten
+Wand 6 im Grab des Nacht dargestellten Szenen "Sehen der Produkte" und "Jagd in
+den Marschen" mit einem Zyklus "Die Freuden der Marschen" verbunden werden,
+wenn ihre Beischriften eine solche Definition nahelegen.   <p>
+
+Auch ganze thematische Zyklen - wie z.B. "Sedfest", "Bestattungsritual",
+"Geburtslegende", "Prim&auml;re Produktion" - pflegt man zusammenfassenden
+Oberbegriffen zu unterstellen, die ihrerseits &uuml;bergeordnete und weite
+Lebensbereiche abdeckende Zyklen bilden. An Beispielen bzw. Vorschl&auml;gen
+seien genannt: "G&ouml;tterkult", "K&ouml;nigskult", "Totenkult", "Jenseits",
+"Feindvernichtung", "Privatleben"; der Bereich der beruflichen Bet&auml;tigung
+oder Arbeit k&ouml;nnte auf h&ouml;chstem und hohem sozialem Niveau als
+"Management", auf niedrigem Niveau als "Produktion und Verarbeitung"
+umschrieben werden. Die Beziehung zwischen einem Zyklus und einem
+&uuml;bergeordneten Zyklus ist wohl meistens hierarchisch - ein auf eine
+Gottheit bezogenes Ritual geh&ouml;rt immer zum "G&ouml;tterkult", die
+prim&auml;re Produktion (von Nahrungsmitteln) immer zur "Produktion und
+Verarbeitung"... Die Verbindung zwischen dem Namen eines Zyklus' und dem
+zugeh&ouml;rigen Oberbegriff wird daher in der Regel vertikal sein. Die
+Hierarchie kann auch mehrstufig sein, wie im Beispiel "Getreidebau" -
+"Prim&auml;re Produktion" - "Produktions- und Verarbeitungstechnik". Wenn aber
+Zyklen auftreten sollten, die zu mehr als einem &uuml;bergeordneten Zyklus
+geh&ouml;ren k&ouml;nnten, so sind in solchen F&auml;llen horizontale
+Verbindungen zu verwenden. Horizontale Verbindungen mit &uuml;bergeordneten
+Zyklen werden auch bei Szenen auftreten, die keinem normalen Zyklus
+angeh&ouml;ren, die also die Zwischenstufen &uuml;berspringen. Dies ist z.B.
+der Fall bei der Szene des "Niederschlagens der Feinde", die nur dem
+&uuml;bergeordneten Zyklus der "Feindvernichtung" untersteht. <p>
+
+Zusammenfassend sei festgehalten: Es sind in den entsprechenden
+Thesaurusdateien die Namen der Subszenen, Szenen und Zyklen festzulegen und
+ihre Beziehungen untereinander als hierarchisch bzw. gleichgeordnet zu
+definieren, wobei jeder im Thesaurus vorkommende Begriff nur in einer einzigen
+hierarchischen, gleichzeitig aber in mehreren gleichgeordneten Beziehungen
+stehen kann. In diesem Bereich sind die allgemeing&uuml;ltigen Verbindungen
+angesiedelt. In der Datei der Museumsobjekte sind die "Belegstellen"
+einzugeben, die &uuml;ber die Namen der Szenen und Zyklen mit den
+Thesaurusdateien verh&auml;ngt sind. Auf diese Weise werden die in den realen
+Denkm&auml;lern vorkommenden, individuellen Szenenkonstellationen ins Spiel
+gebracht. So erh&auml;lt das Datenbanksystem GNOSARCH die erw&uuml;nschte
+Flexibilit&auml;t, um das komplexe Ineinandergreifen mehrerer
+Zusammenh&auml;nge zugleich fassbar zu machen. Der Benutzer soll in die Lage
+versetzt werden, von verschiedenen Gesichtspunkten aus &uuml;ber vielfache
+innere Verzweigungen inhaltlich Verwandtes zusammenzubringen. <p>
+
+Im folgenden sei als Beispiel ein kleiner Zyklen- und Szenenthesaurus
+angef&uuml;hrt, der in der Hauptsache auf der Erfassung der Gr&auml;ber des
+Nacht (TT 52) und des Cheriuf (TT 192) beruht. Es sei daran erinnert, dass die
+Szenennamen in der ikonographischen Thesaurusdatei nur einmal vorkommen und mit
+der Thesaurusdatei der Zyklen (Ideen) bzw. mit der Datei der Museumsobjekte
+jeweils verbunden werden; auf dem Papier jedoch m&uuml;ssen diejenigen
+Szenennamen, die zu mehreren Zyklen geh&ouml;ren k&ouml;nnen, mehrfach
+wiedergegeben werden. Die Ordnung der h&ouml;chsten Oberbegriffe (Zyklen) ist alphabetisch.<p>
+
+
+<pre>
+
+ZYKLEN                          SZENEN
+
+(Zyklus, &uuml;bergeordneter         (Subzene, Leitszene, Szene,
+Zyklus, Lebensbereich)          komplexe Szene)
+oft hierarchisch                nicht hierarchisch
+
+
+-Arbeiten in den Marschen
+                                Jagd mit dem Klappnetz
+                                Papyrus ernten
+-Die Freuden der Marschen 
+                                Jagd in den Marschen
+                                Sehen der Produkte
+                                Sitzen am Speisetisch/haufen
+                                Sitzen in der Halle
+
+-Dienstleistung 
+ (Horizontallinks: Tanz, Musik) 
+                                Herbeibringen von Opfergaben zu 
+                                Schiff
+                                Musizieren
+                                Reihe von Frauen
+                                Reihe von Opfertr&auml;gern
+                                Reihe von Priestern
+                                Reihe von Prinzessinnen
+                                Reihe von Produktetr&auml;gern
+                                Tanzen
+-Feindvernichtung
+                                Ich bin jener grosse Kater 
+                                (TB 17, &lt;22&gt;)
+--Schlacht von Kadesch
+-G&ouml;tterkult
+                                Opferhaufen begiessen
+--Prozession der thebanischen
+  Triade (Opetfest)
+--Prozession des Hathorsymbols
+--Ptah-Sokar-Osirisritual
+                                Gehen um die Mauer (von Memphis)
+                                Aufrichten des Djedpfeilers
+                                Ueberweisung von Opfergaben
+--T&auml;gliches Ritual
+-Jenseits
+--Amduat
+--Buch von der Nacht
+--Pfortenbuch
+--Totenbuch
+                                Sykomore der Nut (TB 59)
+                                Ich bin jener grosse Kater 
+                                (TB 17, &lt;22&gt;)
+-K&ouml;nigskult
+--Geburtslegende
+--Kr&ouml;nungsritual
+--Sedfest
+                                Kultlauf
+                                Prozession zu Schiff
+                                Erscheinen aus dem Palast
+                                Aufrichten des Djedpfeilers
+                                Belohnung von Beamten
+                                Sehen der Denkm&auml;ler
+                                Rudern der G&ouml;tter
+                                Prozession der G&ouml;tterstandarten
+                                Ueberweisung von Opfergaben
+                                Zur T&uuml;r herauskommen
+-K&ouml;rperbewegung
+--Tanz
+                                Tanzen
+--Wettkampf
+                                Wettk&auml;mpfe austragen
+-Management
+                                Belohnung von Beamten
+                                Denkm&auml;ler pr&auml;sentieren
+                                Sehen der Denkm&auml;ler
+                                Sehen der Felder
+                                Sehen der Produkte
+                                Sitzen in der Halle
+                                Zu F&uuml;ssen des Throns stehen
+--Die Pflichten des 
+  Polizeikommandanten
+--Die Pflichten des Veziers
+--Inspektion
+-Musik
+                                Musizieren
+-Opferritual
+-Privatleben
+                                Gastmahl
+                                Jagd in den Marschen
+                                Sehen der Produkte
+                                Sitzen am Speisetisch/haufen
+                                Sitzen in der Halle
+-Produktion und Verarbeitung
+--Gewinnung (Ausbeutung 
+  nat&uuml;rlicher Ressourcen)
+---Fischfang
+---Jagd
+                                Jagd mit Harpune
+                                Jagd mit Klappnetz
+                                Jagd mit Speer
+                                Jagd mit Wurfholz
+---Payrusgewinnung
+                                Papyrus ernten
+--Prim&auml;re Produktion
+---Flachsbau
+                                Flachs raufen
+---Gefl&uuml;gelhaltung
+---Getreidebau
+                                Worfeln
+                                Korn messen
+                                Aehren transportieren
+                                Aehren lesen
+                                Korn schneiden
+                                S&auml;en 
+                                Hacken
+                                Pfl&uuml;gen
+---Rebbau
+                                Trauben ernten
+---Viehhaltung
+--Sekund&auml;re Produktion
+---Goldschmiedearbeit
+---Schreinerei
+--Verarbeitung von 
+  Verbrauchsg&uuml;tern
+                                Keltern
+                                Gefl&uuml;gel verarbeiten
+---Brauerei
+                                Bier brauen
+---Schlachtung
+                                Rinder schlachten
+-Reihen
+                                Reihe von Beamten
+                                Reihe von Frauen
+                                Reihe von G&auml;sten
+                                Reihe von Opfertr&auml;gern
+                                Reihe von Priestern
+                                Reihe von Prinzessinnen
+                                Reihe von Produktetr&auml;gern
+                                Reihe von W&auml;chtern (des Herrn 
+                                der beiden L&auml;nder)
+-Reinigungsritual
+-Schauplatz
+                                Papyrussumpf
+                                Fruchtland
+-Symbolische Szene (symm.)
+                                Symbol der Vereinigung der
+                                beiden L&auml;nder
+-Talfest
+                                Gastmahl
+-Totenkult
+--Bestattungsritual
+---Mund&ouml;ffnungsritual
+                                Mund&ouml;ffnung
+---Sargprozession
+--Speiseritual
+                                Gastmahl
+                                Scheint&uuml;r
+                                Sitzen am Speisetisch/haufen
+</pre>
+
+<hr>
+<a name="fn0">[1]</a>	"Les pantoufles du dieu Thot", Druckfassung des am 6.
+Int. Aegyptologenkongress 1991 in Turin gehaltenen Vortrags, wird in den
+Kongressakten erscheinen. <p>
+<a name="fn1">[2]</a><tt>	</tt>Einladung vom 18.1.1992 zum 1992 Meeting of
+I&amp;E Working Group in Cambridge.<p>
+<a name="fn2">[3]</a><tt>	</tt>Die Erfassung von Personen und ikonographischen
+Details von Szenen, auf die wir hier aus Platzgr&uuml;nden nicht eingehen
+k&ouml;nnen, ist nach demselben Prinzip m&ouml;glich.<p>
+<a name="fn3">[4]</a><tt>	</tt>Vgl. Maya M&uuml;ller, "Iconography: Basic
+Problems of the Classification of Scenes", Druckfassung des am 6. Int.
+Aegyptologenkongress 1991 in Turin gehaltenen Vortrags, wird in den
+Kongressakten erscheinen.
+</body>
+
+</html>

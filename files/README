@@ -1,0 +1,59 @@
+README file for Ancient Near East ftp archive in Cambridge
+
+Directory pub/ancient/egypt
+
+This archive is here by courtesy of the Isaac Newton Institute for
+Mathematical Sciences.
+
+See pub/ancient/README for descriptions of common file types.
+
+Contents:
+
+email.addresses.txt -- Ascii text file of Egyptology email addresses.
+			Now largely superceded by a WWW version
+
+beinlich.txt -- The GM 140, 1994 article announcing the Beinlich
+			wordlist (see next)
+
+beinlich.list -- The "Beinlich word list" referred to in GM 140, 1994.
+	NOTE: This is a LARGE file--over 800k
+
+luxor.txt -- a report on activity/news in Luxor in Winter 1994-5
+
+S-KMT1.2.2.sea.hqx 
+S-KMT1.3cg.sea.hqx
+skmt15#1.hqx & skmt15#2.hqx
+	 -- Hypercard stacks by Mike Dyall-Smith called "A Scribe
+	of Kmt", designed to teach newcomers to Egyptian elements of
+	hieroglyphic signs and values.
+
+	1.2.2 is Black & White and runs with Hypercard 2.1
+	1.3cg is Colour and requires Hypercard 2.2
+	1.5 is the latest version
+	NOTE: Large files--over 800k each
+
+Strudwick.Wb.txt -- Ascii text file of Nigel Strudwick's paper
+            presented at the 1992 Woerterbuch symposium in Berlin
+
+Strudwick.Wb.hqx -- Mac Microsoft Word 5 version of the same.
+
+Woerterbuch.stack.hqx -- Hypercard stack referred to in Strudwick.Wb.*
+           
+Strudwick.geneva.txt -- ASCII text version of paper given by Nigel
+	Strudwick on electronic communication at the 1993 Informatique et
+	Egyptologie meeting in Geneva.
+
+Grammar.hqx -- Hypercard stack for teaching simple Polotskean grammar.
+
+trumpet.hqx -- Hypercard stack with recording of Tutankhamun's silver
+		trumpet.
+
+msdemo.hqx -- demonstration version of Macscribe 1.3, a program for
+		word-processing hieroglyphs by Eric Aubourg.
+	NOTE: This is a LARGE file--nearly 1.5mb
+
+Submissions for the archive should be sent by email to:
+
+Helen Strudwick    hms12@cam.ac.uk
+Nigel Strudwick    ncs3@cam.ac.uk
+

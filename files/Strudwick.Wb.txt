@@ -1,0 +1,187 @@
+The next generation of the Wörterbuch
+
+Nigel Strudwick
+
+
+My thoughts on the future of the Wörterbuch are restricted mainly
+to some ideas of how it should be distributed when its second edition
+is ready. I would only offer one short piece of general advice to
+those who are actively compiling the work. I would advise against
+making the Wörterbuch in whatever final form it takes all things to
+all men, this will only make it unwieldy and unusable. I have no
+fundamental objection to the input of information to the computer such
+as grammatical analysis, but it should not be a prerequisite of the
+form, if nothing else because scholars cannot agree on the details. I
+realise that people cannot also agree on reading and meaning, but that
+can easily be handled. A dictionary is an alphabetical word-list, with
+references, which are absolutely essential in the case of Ancient
+Egyptian. I would certainly advocate that even more references be
+included in the future, since this is a fundamental role of the
+Wörterbuch. I do not feel that it is essential that the references
+be included in hieroglyphic form; although interesting and in an ideal
+world a very good idea, I would argue that it would waste time that
+the compilers could better spend on getting the basic dictionary
+functions together. I would say that this was clearly realised by the
+original compilers of the Wörterbuch.
+
+Aspects of publication and dissemination
+
+As one who would not consider himself a philologist, I would prefer to
+keep the bulk of my remarks to suggestions as to additional forms of
+publication and dissemination of the finished work, namely those using
+electronic media.  I do not wish to see the demise of the printed
+book, and a further printed version of the Wörterbuch would be
+extremely useful. Nonetheless, printing costs are rising, and with the
+present reprints of the dictionary costing in the region of 900DM, the
+likely cost a new Wörterbuch is impossible to estimate.
+
+In the course of the Berlin meeting in September 1992, at which this
+paper was originally presented, I felt most strongly that the question
+of the final form of the publication was being ignored, or at least
+not being given enough consideration.
+
+There is indeed a case for considering at the present only the issues
+of encoding and treatment of texts, and of the form in which the
+material should exist in the computer database.  A strong argument
+against over-concern about the final form is that, if media additional
+to the printed book are to be considered for the publication, it is
+pointless to speculate on what might be possible, given the pace of
+change, since that publication is a number of years away
+
+I accept this up to a point.  That point is very simple: unless we
+have some concept of the sort of material we wish to make available to
+readers in the new Wörterbuch, data cannot be collected and
+arranged in the most useful fashion.  This is my only real concern in
+relation to the present project.
+
+I should now like to turn to some individual subjects.  Dictionaries
+are the ultimate reference work, and it is absolutely essential that
+they can be accessed in the course of other work. This should be kept
+in mind when considering ways in which the Wörterbuch can be
+electronically published.
+
+There are a number of possibilities. The most popular one today is to
+publish the Wörterbuch on CD-ROM, accompanied by small management
+programs which can allow the material to be accessed. This would mean
+that the Wörterbuch can effectively be re-published on a regular
+basis, depending on how much new material is brought in; CDs are now
+relatively inexpensive to make, and the whole database can be placed
+onto a CD and disseminated much more quickly than if it were going to
+a printer.  A very recent development is the appearance of CD ROM
+production drives which can be attached to present office computer
+equipment, and which allow the user to make his own discs, rather than
+having to send them away to a mastering factory.  In this way, once
+the initial investment for the drive has been made, the Wörterbuch
+project will not have to estimate how many discs to be made at one
+time.  CD ROM is more cost-effective, since no-one is going to pay for
+a new printed version every 2/3 years, but a CD service could be set
+up for a subscription.  The Wörterbuch could also be kept ‘in
+print’ this way much more easily, and hopefully might just make
+this version cheaper than the original, but that of course depends so
+much on financing and other commercial factors.
+
+Another method which is less technically sophisticated but which
+allows for more rapid updates of material is the use of the FTP
+archive.  FTP stands for File Transfer Protocol, and is a means of
+accessing read-only electronic archives using international academic
+and commercial networks.  If the Wörterbuch project were to be
+connected to the central computer resources at the
+Humboldt-Universität, an archive could be kept into which data
+files relating to certain aspects of the Wörterbuch material could
+be kept and updated very regularly.  It would be incumbent on scholars
+who use the archive to find the best way of using it; it ought to be
+possible to keep information here which is not available either in the
+printed version of the book or in the CD ROM.1
+
+An example
+
+As well as electronic media through which any future Wörterbuch
+should be disseminated, software has to be provided to make the
+material in the database accessible to users.  With the caveat
+mentioned above about how quickly software goes out of date, I
+developed very rapidly for the Berlin meeting a Hypercard stack which
+shows one way in which the Wörterbuch could be put out. This is in
+no way intended to be a formal suggestion, but just one way in which
+the material could be used in a user-friendly manner.
+
+Hypercard is a pioneering program in “Hypermedia” which handles
+data in many different ways. It is written for the Macintosh and comes
+with each new machine, but there are comparable programs which run
+under MS DOS. Hypercard uses as its basic analogy for each file a set
+of “cards”, which in Hypercard terminology is called a
+“Stack”. The program does not use a traditional data structure
+in the manner of xbase programs; the concept is that it parallels the
+way in which scholars use index cards. Control buttons can be added to
+cards, and these can be programmed in Hypercard’s own language,
+which includes various special effects as well as more conventional
+programming constructions. Graphics can also be added to cards, and it
+is also possible for the program to display photographs. Externally
+programmed commands can be added to the stacks to extend the range of
+capabilities.
+
+The advantage of hypermedia is that one does not have to proceed
+linearly through the cards. Specific links can be made from one card
+to another, or the programming language can be used to jump
+dynamically from one card to another. Thus one can easily go where the
+reader/user wants to, rather than having to follow pre-set
+paths. These facilities which make Hypercard and its comparable
+applications so useful as a way of getting through a disparate mass of
+material.2
+
+Some cards from the sample stack are shown in figures 1–4.
+
+Fig. 1 shows the entry for the enclitic particle 3
+Fig. 2 shows the Belegstellen for 3
+Fig. 3 shows the index of words in Egyptian order in the stack
+Fig. 4 shows the index of words in English translation in the stack
+
+The buttons at the bottom of the cards allow the user to navigate to
+different options. In the word index lists, clicking on a word will
+take the user to that entry.  The emphasis is that there is no fixed
+approach to the data, but rather that the user can move where he
+wishes, when he wishes. It is also quite simple to add personal notes
+to a card, rather like writing in the margins.3
+
+The advantage of a hypermedia (or similar) approach as a way of
+distributing the Wörterbuch is that it can be operated in a manner
+akin to that in which most Egyptologists think: that is, we browse
+around in information, jump forward a couple of pages as ideas strike
+us, and then go back to where we were. A more conventional database
+approach, although undoubtedly more efficient in certain
+circumstances, such as searching a database for all examples of a
+particular combination of circumstances, does not really reflect the
+way in which we work with a dictionary.  It is also possible with a
+computer to incorporate bookmarks into such a system as I am
+describing; versions of the Wörterbuch in languages other than
+German are likewise relatively easy to produce.
+
+I do not feel I can stress this approach too strongly—we must not,
+if we are going to publish the Wörterbuch in any method other than
+paper, restrict ourselves to computer approaches which are
+conventional, and by that I mean the regular database. Hypermedia
+approaches offer us a wealth of possibilities to begin to emulate the
+manner in which we approach the information which can be stored in a
+computer. I believe that the main way in which we are going to be able
+to convince Egyptologists to make greater uses of computers is for the
+information on them to be presented in ways in which they do not
+appear to require a complete change of approach. Once users can be
+convinced that we do not have to change our ways dramatically, then I
+am sure that progress will be more rapid.
+
+Notes:
+
+1 For an explanation of FTP, see my article ‘Electronic
+communication— possibilities for Egyptology’ presented at the
+1993 Geneva ‘Informatique et Egyptologie’ meeting.  Until the
+proceedings of that conference are published, a copy will be available
+via anonymous FTP at the site newton.newton.ac.uk in the directory
+pub/ancient/egypt under the name Strudwick.Geneva.txt.
+
+2 Some further examples of use of hypermedia may be found in my paper
+‘Data-Management in Research and Teaching’, Informatique et
+Egyptologie 7 (1990), 137–46.
+
+3 A copy of this stack, under the name Woerterbuch.hqx, is available
+via anonymous FTP at the site newton.newton.ac.uk in the directory
+pub/ancient/egypt.
+

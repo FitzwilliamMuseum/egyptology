@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+</head>
+<body>
+
+<h1>DAS NETZWERK DES BERLINER &Auml;GYPTISCHEN MUSEUMS</h1>
+
+<h2>Florian Steinborn, Berlin</h2>
+
+<p>Die Konstellation, die der Zweite Weltkrieg und die nachfolgende politische
+  Entwicklung in Bezug auf das &Auml;gyptische Museum in Berlin hinterlassen hat
+  (Auslagerung der Sammlungsbest&auml;nde in verschiedene Teile Deutschlands und
+  sp&auml;tere R&uuml;ckf&uuml;hrung der einzelnen Teile in die jeweiligen
+  Besatzungszonen), stellt heute die gr&ouml;&szlig;te Herausforderung an die
+  Mitarbeiter des &Auml;gyptischen Museums dar. Erstmals seit dem Zweiten
+  Weltkrieg besteht jetzt die M&ouml;glichkeit der Erstellung eines gemeinsamen
+  Inventars, einer damit verbundenen Revision und somit einer genauen Erfassung
+  der Kriegsverluste und -sch&auml;den. Ein entstehendes Informationsnetz soll
+  die beiden, etwa 10 Kilometer entfernten Museumsstandorte miteinander verbinden
+  und so die M&ouml;glichkeit schaffen, die bei der Forschung und t&auml;glichen
+  Arbeit anfallenden Informationen auszutauschen. Ein gro&szlig;er Vorteil bei
+  der Erstellung des Netzes liegt darin, da&szlig; in beiden Teilen des Museums
+  moderne Technik der Datenverarbeitung eingesetzt wird. In der vorliegenden
+  Arbeit m&ouml;chte ich die einzelnen technischen M&ouml;glichkeiten besprechen,
+  die man zur Vernetzung von getrennten Computersystemen einsetzen kann. </p>
+<p><b>
+
+Zielsetzung f&uuml;r die Einrichtung des Netzes </b><p>
+
+Das Netz soll zur Erf&uuml;llung der Anforderungen an den Wissenschaftlichen
+Arbeitsplatz (wap) beitragen. Ein moderner wap verf&uuml;gt danach &uuml;ber
+einen pc, weiterf&uuml;hrend m&uuml;ssen diese pc vernetzt sein. Weiterhin soll
+das zu erstellende Netz die beiden Teile des Berliner &Auml;gyptischen Museums
+in die Lage versetzen, miteinander auf Wegen der Datenfernverbindung (dfv) zu
+kommunizieren. Dabei soll es m&ouml;glich werden, auf m&ouml;glichst
+komfortable Weise Daten zur Verf&uuml;gung zu stellen und auszutauschen. Das
+&Auml;gyptische Museum der Staatlichen Museen zu Berlin, als ein bedeutendes
+Zentrum der &auml;gyptologischen Forschung in der Welt (mit einer der
+gr&ouml;&szlig;ten &auml;gyptischen Sammlungen), w&uuml;rde hier ein Beispiel
+geben, wie moderne Wissenschaft arbeiten kann und arbeiten sollte.<b></p>
+
+Die Netzwerkplanung</b><p>
+
+Wenn man die Einrichtung eines Netzes plant, so mu&szlig; man damit beginnen,
+die Anforderungen zu ermitteln, die das entstehende Netz erf&uuml;llen soll.
+Dazu habe ich die folgende Checkliste erarbeitet:<b><p>
+
+
+</b><pre>
+<b>
+Problemstellung:                                                        Antwort:</b>
+
+Soll <i>Einzelfiletransfer</i> erfolgen?                                 nein
+M&uuml;ssen auch <i>Ton und Video</i> &uuml;bertragen werden?  Ton        nein
+                                            Video(Bilder):     ja
+&Uuml;berschreitet das Netz <i>internat. Grenzen</i>?                   nein<a href="Stein.notes.html#fn1">[1]</a>
+Ist der <i>Datenflu&szlig; konstant</i>?                                   nein<i>
+Art</i> der Verbindung:                      pc zu pc?                 ja
+                                             pc zu lan? <a href="Stein.notes.html#fn2">[2]</a>        eventuell <a href="Stein.notes.html#fn3">[3]</a>
+                                             lan zu pc?                eventuell
+Werden <i>verteilte Datenbanken</i> benutzt?                             nein
+M&uuml;ssen sich Laptop-Benutzer in das Netz einw&auml;hlen k&ouml;nnen?   nein
+Welches <i>Betriebssystem</i> soll verwendet werden?                      ibm os<b> </b>/2
+
+</pre>
+
+
+
+Nach dem Abschlu&szlig; der Modellierung einer Datenbank wurde mit der
+Erfassung bereits revidierter Sammlungsbest&auml;nde begonnen. Dabei wird das
+relationale Datenbanksystem dbms des ibm os<b> </b>/2 benutzt. &Uuml;ber die
+verschiedenen Arbeitsschritte bei der Konzeption relationaler Datenbanken haben
+an dieser Stelle bereits E. W. Adams und N. Strudwick sowie E. Loring
+ausf&uuml;hrlich berichtet.<a href="Stein.notes.html#fn4">[4]</a> Wir haben uns beim Datenbankdesign aus
+verschiedenen Gr&uuml;nden nicht f&uuml;r das Schema der <i>verteilten
+Datenbanken </i>entschieden. Bei diesem Prinzip geht man davon aus, da&szlig;
+die einzelnen Teilnehmer im Netz ihre Datenbest&auml;nde lokal auf den eigenen
+Rechnern behalten und mit eigenen Datenbanken arbeiten. Das Schema der
+verteilten Datenbanken ist ein leistungsf&auml;higes Modell, aber wenn man sich
+f&uuml;r dieses Modell entscheiden will, dann sollte man folgende Fakten im
+Kopf behalten:<p>
+
+1.	Bei der Verwendung von verteilten Datenbanken kann man nicht ohne weiteres
+ein relationales Datenbankdesign verwenden. Die Einrichtung von verteilten
+Datenbest&auml;nden auf entfernten Rechnern f&uuml;hrt zwangsl&auml;ufig zu
+einem anderen Datenbankprinzip, den <i>Netzwerkdatenbanken</i>, die ich hier
+nicht n&auml;her besprechen m&ouml;chte.<a href="Stein.notes.html#fn5">[5]</a><p>
+
+2.	In gewisser Hinsicht legt man sich bei der Wahl zwischen Netzwerkdatenbank
+oder relationaler Datenbank fest. Die Struktur einer Datenbank sp&auml;ter zu
+&auml;ndern bringt immer gro&szlig;e Schwierigkeiten mit sich und man riskiert
+auch bei gr&ouml;&szlig;ter Vorsicht Datenverlust. Eine &Auml;nderung von
+Netzwerkdatenbank zu relationaler Datenbank stellt besonders wegen der
+Unterschiede der inneren Logik der beiden Systeme ein Problem dar. In den
+n&auml;chsten Jahren wird der Anteil der revidierten Sammlungsbest&auml;nde
+stark ansteigen (und die Datenbank somit schnell wachsen). Mit einer ebenfalls
+in den n&auml;chsten Jahren erfolgenden Zusammenlegung der noch getrennten
+Teile der Sammlung wird das wan &uuml;berfl&uuml;ssig und ein lan reicht aus.
+Zu diesem Zeitpunkt m&uuml;&szlig;te dann eine Umstrukturierung der Datenbanken
+unternommen werden, die aus den oben beschriebenen Gr&uuml;nden nicht ratsam
+ist.<p>
+
+3.	Die technische Implementation eines wan, das mit verteilten Datenbanken
+arbeitet (also ein Netzwerkdatenbankmodell) ist sehr viel komplizierter als
+wenn man mit einem zentralen Massenspeicher arbeitet. Ich will zur
+Verdeutlichung dieses Problems lediglich andeuten, da&szlig; bei verteilten
+Datenbanken eine der gr&ouml;&szlig;ten Schwierigkeiten darin besteht, eine
+Synchronisierung der Datenbankzugriffe zu gew&auml;hrleisten. Die
+Integrit&auml;t der Datenbank darf zu keinem Zeitpunkt gef&auml;hrdet werden,
+auch wenn mehrere Nutzer gleichzeitig Daten aus denselben `Datenbanken'
+abfragen oder in diese eingeben. Es darf zu keinen sogenannten `deadlocks' <a href="Stein.notes.html#fn6">[6]</a>
+kommen. Obgleich im Regelfall die Datenbanksysteme selbst auf solche kritischen
+Punkte achten (und sich mit den Betriebssystemen abstimmen, f&uuml;r die sie
+programmiert wurden) mu&szlig; man Kenntnis von solchen Problemen haben, wenn
+man (wie wir) selbst als Programmierer in den Arbeitsablauf des
+Datenbanksystems eingreifen m&ouml;chte.<p>
+
+Bis jetzt haben wir in den beiden, r&auml;umlich noch getrennten
+Sammlungsteilen separat damit begonnen, Daten in die definierte Datenbank der
+einzelnen Rechner einzugeben. Die Struktur der Datenbank ist auf allen Rechnern
+gleich.<a href="Stein.notes.html#fn7">[7]</a> Eine Verbindung zwischen den einzelnen Rechnern besteht nicht, so
+da&szlig; unsere derzeitige Situation durch Fig. 1 gut verdeutlicht wird.<p>
+
+
+<img src="stein1.gif">
+
+<pre>                                                                                  
+                                     Fig. 1                                       
+</pre>
+
+<b>Anwendung
+der Checkliste</b><p>
+
+Mit einem <i>Einzelfiletransfer</i> ist niemandem geholfen. Einzelfiletransfer
+kann h&ouml;chstens dazu genutzt werden, zwischen Datenbanken auf verschiedenen
+Maschinen Backups auszutauschen. Der automatische Austausch von bestimmten
+Tabellen aus der einen Datenbank in eine andere ist sehr kompliziert und ohne
+spezielle Software unm&ouml;glich.<a href="Stein.notes.html#fn8">[8]</a> Ein Datenaustausch im Einzelfiletransfer,
+etwa nach dem Arbeitsprinzip von E-Mail oder &auml;hnlichen Systemen ist nicht
+sinnvoll, da es beim Arbeiten mit Datenbanken (das hei&szlig;t also
+Dateneingabe und Datenabfrage) so gut wie nie zu Suchergebnissen in Form von
+ganzen Files kommt. R&uuml;ckgabewerte in relationalen Datenbanken sind immer
+<i>Mengen</i>, die in Form von Tabellen an den Punkt der Abfrage
+zur&uuml;ckgelangen und dem Nutzer dort zur Verf&uuml;gung stehen. <p>
+
+
+<img src="stein2.gif">
+
+<pre>                                                                                 
+                                    Fig. 2                                       
+</pre>Die
+&Uuml;bertragung von <i>Bild und Ton</i> wird in diesem Projekt vorerst so
+organisiert werden, da&szlig; Bilder von Objekten in Form von Bitmap-Files
+o.&auml;. gespeichert werden, die &uuml;ber ihren Dateinamen zug&auml;nglich
+sind. Zur Speicherung k&ouml;nnte eine ibm 3363 worm-Disk genutzt werden (die
+Kapazit&auml;t von Festplatten reicht aber am Anfang auf jeden Fall auch aus,
+da in neuen Rechnern kaum noch Kapazit&auml;ten unter 100 mb auftreten). In
+einem einzurichtenden Netz w&uuml;rde sich die Art der Kommunikation
+zun&auml;chst auf eine Kommunikation zwischen pcs beschr&auml;nken. Bislang
+wird in den Sammlungsteilen jeweils mit nur einem bzw. zwei ps<b> </b>/2
+gearbeitet. K&uuml;nftig ist es aber durchaus m&ouml;glich, da&szlig; weitere
+pc angeschafft werden, die dann untereinander &uuml;ber Token-Ring verbunden
+werden w&uuml;rden und so an dem Netz teilhaben w&uuml;rden. Auch der
+wahrscheinlich &uuml;ber k&uuml;rzeren oder l&auml;ngeren Zeitraum erfolgende
+r&auml;umliche Zusammenschlu&szlig; einzelner Institutionen w&uuml;rde zur
+Bildung von lan f&uuml;hren. Hier k&auml;me es dann zu einer <b>lan zu
+</b>pc<b> bzw. </b>pc<b> zu </b>lan Verbindung (Fig. 2 zeigt einen PC, der
+&uuml;ber dfv mit einem lan in Verbindung steht). Dabei ist der
+<i>Datenflu&szlig;</i> nicht konstant sondern steigt in den Momenten an, wenn
+wirklich Daten angefordert werden. Bei intensiver Arbeit werden aber die
+Momente, in denen Daten transferiert werden m&uuml;ssen, stark zunehmen, so
+da&szlig; man letztlich doch zu einem relativ h&auml;ufigen, wenn auch nicht
+konstantem Datenflu&szlig; gelangt. Der Aufbau eines Netzes lohnt sich nur
+dann, wenn es auch wirklich auslastend benutzt wird. <b><p>
+
+Die Netzinstallation</b><p>
+
+Bei der Einrichtung eines wan ist man immer auf die Zusammenarbeit mit einem
+&ouml;rtlichen Unternehmen der Telekommunikation angewiesen. Von Land zu Land
+wird es hier Unterschiede hinsichtlich der Angebote geben, die die einzelnen
+Postunternehmen machen k&ouml;nnen. Grunds&auml;tzlich jedoch gibt es feste
+Prinzipien (die ich hier in stark vereinfachter Form erl&auml;utern
+m&ouml;chte), nach denen eine &Uuml;bertragung von Daten in Netzen erfolgen
+kann. Sie unterscheiden sich nach Datentransportgeschwindigkeit und der Art und
+Weise, wie die Daten transportiert werden. Danach kann man Aussagen &uuml;ber
+die Zweckm&auml;&szlig;igkeit f&uuml;r die jeweilige Verwendung treffen. <p>
+
+Die <i>Datentransportgeschwindigkeit</i> stellt eine variable Gr&ouml;&szlig;e
+dar und hat keinerlei Einflu&szlig; auf die Art und Weise des Datentransportes.
+Von ihr h&auml;ngt die &Uuml;bertragungsdauer ab. Viel entscheidender ist aber
+die Frage nach der <i>Art</i> des Datentransportes. Man unterscheidet hier:<p>
+
+	1. Paketvermittelten Datentransport<p>
+
+	2. Leitungsvermittelten Datentransport<p>
+
+	3. Direktrufanschl&uuml;sse und Direktrufverbindungen<p>
+
+Bei <i>paketvermitteltem Datentransport</i> kommt eine echte Verbindung beider
+Teilnehmer nicht zustande. Die Daten werden beim Absender in `Pakete' verpackt
+und getrennt abgeschickt. Beim Empf&auml;nger werden die Pakete dann wieder in
+der richtigen Reihenfolge zusammengesetzt und stehen danach zur Verf&uuml;gung.
+Die Verbindung ist nie konstant.<p>
+
+Beim <i>leitungsvermittelten Datentransport</i> wird tats&auml;chlich eine
+direkte Verbindung zwischen den Teilnehmern aufgebaut. Das kann mitunter eine
+l&auml;ngere Zeit dauern und h&auml;ngt immer davon ab, wie stark die Leitungen
+gerade frequentiert sind. Auch diese Verbindung wird abgebrochen, wenn der
+Datentransfer erfolgt ist.<a href="Stein.notes.html#fn9">[9]</a><p>
+
+Bei diesen beiden Arten des Datentransportes berechnen sich die Kosten durch:<p>
+
+a)	Bereitstellung des Anschlusses<p>
+
+b)	Geb&uuml;hren f&uuml;r die bereitgestellten Dienste<p>
+
+c)	Menge der &uuml;bertragenen Daten<p>
+
+Die <i>Direktrufanschl&uuml;sse und Direktrufverbindungen</i> sind das
+verst&auml;ndlichste Prinzip, denn es entspricht den gew&ouml;hnlichen
+Telefonleitungen. Allerdings sind die zum Datentransport benutzten Leitungen
+leistungsf&auml;higer. Verst&auml;ndlicherweise kann man sie nur einsetzen,
+wenn sich die Anzahl der Teilnehmer und vor allem deren Lokation nicht
+&auml;ndert. Genau aus diesem Grunde ist es diese Art der Verbindung, die
+zwischen den Museumsstandorten aufgebaut werden wird (es ist au&szlig;erdem in
+Deutschland die kosteng&uuml;nstigste Art der Verbindungsherstellung). Die
+Kosten f&uuml;r die &uuml;bertragenen Daten entfallen hier, da ja die Leitung
+als solche angemietet wird. Solche Leitungen rechnen sich nat&uuml;rlich nur
+dann, wenn es sich um Leitungen innerhalb einer Stadt handelt.<p>
+
+
+<img src="stein3.gif">
+
+<pre>                                                                                   
+                                     Fig. 3                                        
+</pre>Konkret
+wird am &Auml;gyptischen Museum die erste Vernetzungsstufe wie folgt aussehen:
+die beiden Standorte werden mittels eines gemieteten Direktrufanschlusses
+verbunden (Fig. 3). Die in der Abbildung dargestellten Br&uuml;ckenrechner
+dienen lediglich der Protokoll&uuml;bersetzung. Von der Leistung her sind die
+Anforderungen an die <i>Gateways</i> nicht besonders hoch; ein &auml;lterer
+Rechner der AT-Klasse gen&uuml;gt hier v&ouml;llig, er sollte jedoch einen
+Koprozessor besitzen. Hierbei wird eine der leistungsf&auml;higsten Techniken
+angewendet, die auf dem Markt der Vernetzung zu finden sind: der <b>ibm
+Token-Ring</b>.<a href="Stein.notes.html#fn10">[10]</a> In Fig. 4 wird an beiden Standorten ein <i>lokales Netz
+<b>emuliert</b></i>. Der `Gateway'-Rechner sorgt f&uuml;r die
+Protokoll&uuml;bersetzung zwischen Modem (das Teil, das die Daten in die
+Telefonleitung schickt und aus der Leitung liest) und Token-Ring. <p>
+
+
+<img src="stein4.gif">
+
+<pre>                                                                                   
+                                     Fig. 4                                        
+</pre>Die
+Daten selbst werden zentral an einem der beiden Standorte gespeichert (auf
+<b>einem</b> PS<b> </b>/2 mit 300 mb Speicherkapazit&auml;t). Die Konsistenz
+der Datenbank wird dadurch in keiner Weise gef&auml;hrdet (s.o.).<b><p>
+
+Weitere Perspektiven zum Ausbau des Netzes</b><p>
+
+Das Konzept des Token-Ring ist auch &uuml;ber l&auml;ngere Zeit eine
+ausbauf&auml;hige Strategie. Oben wurde bereits festgestellt, da&szlig; die
+Verbindung eigentlich zwischen zwei Netzen hergestellt wird. Somit ist
+nat&uuml;rlich auch die M&ouml;glichkeit impliziert, da&szlig; diese Netze
+ausgebaut werden k&ouml;nnen, indem an das bestehende lokale Token-Ring-Netz
+einfach weitere PC angeschlossen werden. Diese m&uuml;ssen weder unbedingt zum
+&Auml;gyptischen Museum geh&ouml;ren (obwohl es nat&uuml;rlich sehr sinnvoll
+w&auml;re, weitere Arbeitspl&auml;tze mit PC auszustatten und ihnen &uuml;ber
+das bestehende Netz Zugriff auf das in der Datenbank vorliegende Inventar des
+&Auml;gyptischen Museums zu erm&ouml;glichen <a href="Stein.notes.html#fn11">[11]</a>), noch unter ein und demselben
+Betriebssystem betrieben werden. Zum Beispiel ist ein Anschlu&szlig; von PC
+unter dem weit verbreiteten Betriebssystem PC- oder MS-dos ohne weiteres durch
+den Einbau einer Token-Ring-Netzwerkkarte m&ouml;glich, ohne da&szlig; diesen
+Nutzern irgendein Nachteil gegen&uuml;ber den os<b> </b>/2 Nutzern entsteht
+(auch eine Einbindung von Rechnern der Apple-Macintosh-Familie ist ohne
+weiteres m&ouml;glich). <p>
+
+Allerdings sollte eine museumsweite Einf&uuml;hrung von os<b> </b>/2 ernsthaft
+in Erw&auml;gung gezogen werden, da dieses Betriebssystem besonders in Netzen,
+aber auch in Einzelplatzanwendungen gegen&uuml;ber dem normalen dos enorme
+Vorteile aufzubieten hat (multitasking- multithreading Operationsmodi;
+einheitliche, im Betriebssystem integrierte Nutzeroberfl&auml;chen
+[Presentation Manager] und die Workplace-Shell; volle Ausnutzung des
+Befehlssatzes und der Adressierungsschemata der I80386 Prozessorfamilie,
+dadurch schnellere und effizientere Codeausf&uuml;hrung; integrierte
+M&ouml;glichkeiten zur Verwaltung und Teilnahme an Netzen [Communications
+Manager]; integriertes Datenbanksystem, das selbst den h&ouml;chsten
+Anspr&uuml;chen der Informatik gen&uuml;gt [in der Tat ist es uns nur durch
+dieses System m&ouml;glich geworden, unsere Datenbank in der jetzt vorliegenden
+Form zu entwickeln]; mehrere Operationsmodi des Betriebssystems os<b> </b>/2
+selbst [<b><i>problemlose</i></b> Ausf&uuml;hrung von <i>allen</i> `alten'
+dos-Programmen wie glyph o.&auml;., auch die Ausf&uuml;hrung von
+Windows-Programmen ist ohne eine Installation von MS-Windows in der gewohnten
+Fenster-umgebung durchaus m&ouml;glich]).<p>
+
+Eine Erweiterung dieses Netzes, sowohl lokal als auch global (also innerhalb
+Berlins) ist denkbar und erw&uuml;nscht. Innerhalb eines lan (und der
+Token-Ring ist ja nichts anderes) kann die Entfernung zwischen den einzelnen pc
+bis zu 2000 Metern betragen. Das legt eine Verbindung der anderen, ebenfalls
+getrennten Sammlungen der Staatlichen Museen zu Berlin nahe. Es k&auml;me zur
+Entstehung lokaler Netze, die &uuml;ber die `Standleitung' verbunden
+w&auml;ren. &Uuml;ber diese Leitung w&auml;re auch ein Anschlu&szlig; an
+<i>internationale Netze </i>m&ouml;glich. Internationale Netze werden
+erreichbar, indem man sich an Institutionen wendet, die mit solchen Netzen
+verbunden sind (wie z.B. Universit&auml;ten), sogenannte Netzknoten. Zu diesen
+Knoten baut man dann Verbindungen der gew&uuml;nschten Art auf und nutzt den
+Knoten als Br&uuml;cke.<b><p>
+
+Danksagungen:</b><p>
+
+Die hier vorliegende Arbeit ist ein Ergebnis eines Studienprojektes der
+&auml;gyptologischen Institutionen Berlins mit der ibm Deutschland GmbH. <p>
+
+Ich danke Herrn Prof. D. Wildung sehr f&uuml;r die M&ouml;glichkeit, an diesem
+Projekt mitzuarbeiten. Ferner danke ich: <p>
+
+Herrn J. Elsler (ibm Deutschland), der mit seinen Ratschl&auml;gen auf der
+technischen Seite entscheidend zum Gelingen des Projektes beigetragen hat;<p>
+
+Herrn Dr. P. M. Wolf (Institut f&uuml;r Sudanarch&auml;ologie und
+&Auml;gyptologie der Humboldt-Universit&auml;t zu Berlin); auf die
+Zusammenarbeit mit ihm, insbesondere beim Datenbankentwurf und der Konzeption
+des Anwendungsprogramms f&uuml;r den Benutzer, h&auml;tte ich nicht verzichten
+k&ouml;nnen; auf der praktischen Seite der Anwendungsentwicklung war er stets
+mein Partner und ich verdanke ihm viele Ideen und Anregungen;<p>
+
+Herrn Dr. K. H. Priese (Staatliche Museen zu Berlin-&Auml;gyptisches Museum)
+f&uuml;r seine wertvollen Anregungen in Bezug auf die t&auml;gliche
+Museumsarbeit (wie zum Beispiel Revisionen) und die Verarbeitung der
+Ergebnisse, die dieser Arbeit entstammen;<p>
+
+Herrn Dipl. phil. K. Finneiser f&uuml;r seine Arbeiten am Thesaurus;<p>
+
+Herrn H. K&ouml;lsch (ibm Deutschland) f&uuml;r die gro&szlig;z&uuml;gige
+Unterst&uuml;tzung w&auml;hrend der gesamten Projektdauer;<p>
+
+<p>
+
+Anregungen und Fragen erbeten:<p>
+
+Florian Steinborn<p>
+
+Fehrbelliner Str. 44<p>
+
+O-1054 Berlin<p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Single col page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->  
+<link href="../code/er.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+<link href="../code/er.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../code/oneColElsCtr.css" rel="stylesheet" type="text/css" media="all"  />
+<!-- InstanceBeginEditable name="head" --><title>Untitled Document</title>
+<!-- InstanceEndEditable -->
+</head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="Main" -->
+
+<h1>Beinlich wordlist information</h1>
+
+<h3>How it works</h3>
+
+<p>The application is a CGI (Common Gateway Interface) program written in
+  Applescript which controls the interaction between the MacHTTP/Webstar server program and
+  the Filemaker Pro database which does the real work. It works like this:</p>
+<p>
+
+</p>
+<ol>
+  <li>User types data in the form and clicks submit. The reference to the CGI
+    program and the form data are sent to the server.
+    
+  </li>
+  <li>MacHTTP recognises this as a CGI call and passes the data on to the CGI
+    program as an Apple Event.
+    
+  </li>
+  <li>The Applescript CGI program interprets the Apple Event and the data, arranges
+    it in a certain way, and tells Filemaker Pro to search the database, and write
+    the results to a file.
+    
+  </li>
+  <li>The URL for this file is sent back to your WWW client software, which then
+    retrieves and displays the file.
+    
+  </li>
+</ol>
+
+
+<p>The advantage of this system is that it lets Filemaker Pro do what it is best at
+  (database work) while letting me set things up the way I want them to be.
+  Although Applescript is not as fast as conventional programming languages, why
+  write a database program when they exist already?</p>
+<p>
+  
+  The CGI approach is operating system independent. Just because the server runs on
+  a Mac doesn't mean that you have to use a Mac to access it. Any WWW client
+  software from any machine can theoretically access a CGI application &quot;seamlessly&quot;
+  as the marketing people say. I think this is the best way yet to put various
+  Egyptological databases on line.</p>
+<p>
+  
+  The down side of the Applescript/Filemaker approach is that it is slower than
+  using a specially optimised program. It's like the speed of Assembly language as
+  against Pascal or C. BUT in the longer term it may be more flexible as it can
+  also be adapted to edit online data without writing a whole new program.
+  
+</p>
+<h3>Speed</h3>
+
+<p>The CGI program is only active for a few seconds per search. Searches with @ and
+  * take a lot longer. The more data which is found by the query, the longer the
+  response time. The big imponderable is the time take to interact with the
+  server. The server on which the database runs can be very busy with
+  many users accessing it simultaneously, and this can slow things <b>dramatically</b>. 10-15 seconds is the sort of average access time we get in
+  Cambridge. For reasons explained above, this method will never be as fast
+  as a specially optimised program.
+  
+</p>
+<h3>Compatibility</h3>
+
+<p>I have tried the CGI with what I hope are the most recent versions of the
+  following WWW client software: Netscape (PC/Mac), Macweb, Lynx (Unix), Mosaic
+  (PC/Mac/X), and it seems to have run OK. Older versions of Mosaic were not too
+  happy. Let me know if your software fails to run. </p>
+<h3>Problems</h3>
+
+Filemaker Pro version 2.1v3 is not case sensitive. This is particularly
+irritating with the <i>Manuel de codage</i> transcription system, since you may
+well get back a lot of data you didn't expect. There is no obvious solution but
+to wait for Claris to fix it.<p>
+
+At present it isn't possible to get results if you type umlauts in the search
+boxes. This is because, as far as I know, the WWW client software cannot encode
+them and send them to the server, although it is capable of interpreting encoded
+ones sent to it. Presumably future improvements will permit this.
+
+</p><h3>Ideas for development</h3>
+
+The text is returned in plain form at the moment, without formatting. I have
+developed a version which will return the result as a HTML table, but not all WWW
+client software yet supports tables, so either I will have to wait, or add an
+option to return a tabular result.<p>
+
+I would appreciate other ideas.
+
+
+</p><hr />
+
+Nigel Strudwick <a href="mailto:ncs3@cam.ac.uk">ncs3@cam.ac.uk</a>
+
+<!-- InstanceEndEditable -->
+					<div align="right">
+					  <p>Unless otherwise indicated, &copy; Nigel Strudwick 1994-2016</p>
+					</div>
+  <!-- end #mainContent --></div>
+<!-- end #container --></div>
+</body>
+<!-- InstanceEnd --></html>
